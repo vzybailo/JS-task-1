@@ -8,21 +8,55 @@
 </head>
 <body>
     <script>
-       
-       "use strict"
+        /* задание 1 */
+              "use strict"
         var love = 'Привет! как дела? ',   /* создаем переменную с типом строка */
             vowels=['о', 'и', 'е', 'ю', 'а', 'а', 'o', 'я'], /* создаем создаем массив гласных (тип строка)*/
             resultValue = '';
-
-        for(var i = 0; i < love.length; i++) {
+        for(var i = 0; i < love.length; i++) {  /* i - это номер элемента массива*/
             var character = love.charAt(i)
             if (vowels.indexOf(character) !== -1) {
                 resultValue = resultValue + character; 
             }
             
         }
-
         console.log(resultValue);
+
+        /* задание 2 */
+
+        var users = [
+                {
+                    name: 'Алексей',
+                    salary: 500
+                },
+                {
+                    name: 'Виктор',
+                    salary: 1300
+                },
+                {
+                    name: 'Иван',
+                    salary: 1500
+                }
+            ],
+                richUsers = [];
+
+            for(i = 0; i < users.length; i++) {  /* i - это номер элемента массива*/
+                if (users[i].salary > 1000) {
+                    richUsers.push(users[i].name);
+                }
+            }
+
+            console.log(richUsers);
+
+            /* задание 3 */
+
+            function fileExtension(fileName) {
+                return fileName.slice(fileName.lastIndexOf('.') + 1) === 'html'; 
+            }
+
+            console.log(fileExtension('index.html'));
+            console.log(fileExtension('index.php'));
+
             
     </script>
 </body>
